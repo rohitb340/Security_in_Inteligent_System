@@ -99,11 +99,11 @@ Summary of results (see detailed figures in `images/` and the full report):
 
 ### Baseline (clean MNIST)
 
-* Test accuracy: 99.20%
+* Test accuracy: 99.08%
 
-* Test loss: 0.0254
+* Test loss: 0.0265
 
-* Inference time: ~0.71 ms/sample
+* Inference time: ~0.5808 ms/sample
 
 * Confusion matrix nearly diagonal (strong performance on clean data).
 
@@ -111,15 +111,15 @@ Summary of results (see detailed figures in `images/` and the full report):
 
 * Inserted a 4×4 white corner patch into 100 training images of digit 7.
 
-* Clean test accuracy: 99.27% (no significant drop).
+* Clean test accuracy: 99.22% (no significant drop).
 
 * Demonstrates stealthy backdoor behaviour: global accuracy remains high while targeted trigger behaviour is introduced.
 
-### FGSM Adversarial Attack (ART, ε = 0.2)
+### FGSM Adversarial Attack (ART, ε = 0.7)
 
-* Baseline model accuracy drops to ~89.43% on FGSM adversarial test set.
+* Baseline model accuracy drops to ~25.90% on FGSM adversarial test set.
 
-* FGSM loss: 0.3618
+* FGSM loss: 2.8516
 
 * Confirms susceptibility of standard CNNs to gradient-based adversarial perturbations.
 
@@ -127,11 +127,11 @@ Summary of results (see detailed figures in `images/` and the full report):
 
 * After adversarial training against FGSM:
 
-* * Clean accuracy: 99.22%
+* * Clean accuracy: 99.26%
 
-* * FGSM accuracy: improved to ~96.30%
+* * FGSM accuracy: improved to ~97.22%
 
-* * FGSM loss: 0.1399
+* * FGSM loss: 0.0918
 
 * Shows strong robustness gains with minimal impact on clean-data performance.
 
